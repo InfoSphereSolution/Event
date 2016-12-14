@@ -51,7 +51,7 @@
                                 <li class="active"><a ui-sref="home" href="#Home">Home <span class="sr-only">(current)</span></a></li>
                                 <li><a ui-sref="services" href="#Services">Service</a></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Photos</a></li>
                                         <li><a href="#">Videos</a></li>
@@ -76,9 +76,9 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="background-color:#222; color:#808080; margin-top:50px">
-            <div id="AboutUs" class="col-sm-6" style="text-align: justify">
-                <h3><u>About Us</u></h3>
+        <div class="row" style="background-color: #222; color: #808080; margin-top: 50px">
+            <div id="AboutUs" class="Col-lg-6 col-sm-6 col-xs-12" style="text-align: justify">
+                <h3><i><u>About Us</u></i></h3>
                 <p>
                     This is a event management compant and this is the description of the company.
                     Here we can describe few things about the company
@@ -92,27 +92,34 @@
                 </p>
                 <a ui-sref="aboutus" href="#AboutUs" class="pull-right">Know more...</a>
             </div>
-            <div id="ContactUs" class="col-sm-4" style="text-align:center; margin:auto">
-                <h3><u>Contact Info</u></h3>
-                <p><span class="glyphicon glyphicon-globe"></span><br />name, Stree Adress,<br />city, state, country</p>
-                <p><span class="glyphicon glyphicon-earphone"></span><br />+91 7894561234</p>
-                <p><span class="glyphicon glyphicon-envelope"></span><br/>somename@domail.com</p>                
+            <div id="ContactUs" class="col-lg-4 col-sm-4 col-xs-12" style="text-align: center; margin: auto">
+                <h3><i><u>Contact Info</u></i></h3>
+                <p><span class="glyphicon glyphicon-globe"></span>
+                    <br />
+                    name, Stree Adress,<br />
+                    city, state, country</p>
+                <p><span class="glyphicon glyphicon-earphone"></span>
+                    <br />
+                    +91 7894561234</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>
+                    <br />
+                    somename@domail.com</p>
             </div>
-            <div class="col-sm-2" style="text-align:justify; margin:auto">
-                <h3><u>Site Map</u></h3>
-                <ul>
-                    <li><a ui-sref="home" href="#Home"/>Home</li>
-                    <li><a ui-sref="services" href="#Services"/>Services</li>
-                    <li><a ui-sref="photos" href="#Photos"/>Photos</li>
-                    <li><a ui-sref="videos" href="#Videos"/>Videos</li>
-                    <li><a ui-sref="aboutus" href="#AboutUs"/>About Us</li>
-                    <li><a ui-sref="contactus" href="#ContactUs"/>Contact Us</li>                    
-                </ul>
+            <div class="col-lg-2 col-sm-2 col-xs-12 center-block" style="text-align: center; margin: auto">                     
+                <h3><i><u>Site Map</u></i></h3>
+                 <p><a ui-sref="home" href="#Home"/>Home </p>
+                    <p><a ui-sref="services" href="#Services"/>Services</p>
+                    <p><a ui-sref="photos" href="#Photos"/>Photos</p>
+                    <p><a ui-sref="videos" href="#Videos"/>Videos</p>
+                    <p><a ui-sref="aboutus" href="#AboutUs"/>About Us</p>
+                    <p><a ui-sref="contactus" href="#ContactUs"/>Contact Us</p>                    
+                
             </div>
+            
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <p class="black" style="padding:10px;">© 2016 Event | Designed & Developed by : Rohit & Savita</p>
+                <p class="black" style="padding: 10px;">© 2016 Event | Designed & Developed by : Rohit & Savita</p>
             </div>
         </div>
     </div>
@@ -121,6 +128,8 @@
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-ui-router.min.js"></script>
     <script src="App_Scripts/app.js"></script>
+    <!--Controllers-->
+    <script src="../App_Controller/ServicesController.js"></script>
 </body>
 </html>
 

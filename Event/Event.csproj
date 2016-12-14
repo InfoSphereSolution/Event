@@ -57,10 +57,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Controller\ServicesController.js" />
     <Content Include="Images\aaa.jpg" />
+    <Content Include="Images\Chrysanthemum.jpg" />
     <Content Include="Images\Desert.jpg" />
+    <Content Include="Images\Hydrangeas.jpg" />
+    <Content Include="Images\Jellyfish.jpg" />
     <Content Include="Images\Koala.jpg" />
     <Content Include="Images\Lighthouse.jpg" />
+    <Content Include="Images\Tulips.jpg" />
     <Content Include="Pages\AboutUs.html" />
     <Content Include="App_Scripts\app.js" />
     <Content Include="App_Style\Site.css" />
@@ -826,6 +831,7 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="Model\Services.json" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -911,6 +917,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Scripts\Controller\" />
+    <Folder Include="App_Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

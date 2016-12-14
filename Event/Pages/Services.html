@@ -1,5 +1,28 @@
-﻿<div>
-    This is a service page
-    this is the change
+﻿<div class="row" style="text-align: justify">
+    <div class="col-sm-offset-1 col-sm-10">
+        <h2><i>Services</i></h2>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter what you need here..." ng-model="Service" />
+            </div>
+        </div>
+        <div class="row" ng-controller="serviceController as serviceCtrl">
+            <div class="col-lg-3 col-sm-4 col-xs-12" ng-repeat="service in serviceCtrl.services | filter:Service">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{service.Name}}</div>
+                        <div class="panel-body">
+                            <img alt="serviceImage" class="img img-responsive img-rounded" ng-src='{{service.ImageURL}}' />
+                        </div>
+                        <div class="panel-footer">
+                            <p>{{service.Description}}</p>
+                            <p>{{service.Category}}</p>
+                            <p ng-hide="true">{{service.HashTag}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
