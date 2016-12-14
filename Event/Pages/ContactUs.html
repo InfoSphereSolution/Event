@@ -1,35 +1,42 @@
-﻿<div>This is a contactUs page</div>
-<div class="form-group">
-                    <table style="margin:auto;">
-                        <tr>
-                            <td>
-                                <input id="txtUsername" type="text" class="form-control" placeholder="Enter your Name"/>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="txtEmail" type="text" class="form-control" placeholder="Enter your EmailID"/>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="txtMobile" type="text" class="form-control" placeholder="Enter your Mobile No."/>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="txtComment" cols="20" rows="3" class="form-control" placeholder="Enter your Comment"></textarea>                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="btnContact" type="button" value="Submit" class="form-control btn btn-primary"/>
-                            </td>
-                        </tr>
-                    </table>
+﻿<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <div class="row">         
+            <div class="col-sm-6" style="text-align:justify">
+                <h3 style="text-align: justify;">Contact Info</h3>
+                <p><span class="glyphicon glyphicon-globe"></span><br />name, Stree Adress,<br />city, state, country</p>
+                <p><span class="glyphicon glyphicon-earphone"></span><br />+91 7894561234</p>
+                <p><span class="glyphicon glyphicon-envelope"></span><br/>somename@domail.com</p>   
+            </div>   
+            <div class="col-sm-6">
+                <h3 style="text-align: justify;">General Enquiries</h3>
+                <div class="form-group" style="margin: 0px auto 0px auto;">                    
+                    <div class="form-area" style="margin:auto">
+                        <form role="form">                            
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required />
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" placeholder="Message" maxlength="140" rows="6"></textarea>
+                            </div>
+                            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit</button>
+                        </form>
+                    </div>
                 </div>
+            </div>            
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
 
 
