@@ -34,7 +34,6 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-
                 <nav class="navbar navbar-inverse">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,7 +59,7 @@
                                         <li><a ui-sref="services" href="#Services">Services</a></li>
                                     </ul>
                                 </li>
-                                <li><a ui-sref="aboutus">About Us</a></li>
+                                <li><a ui-sref="aboutus" href="#AboutUs">About Us</a></li>
                                 <li><a ui-sref="contactus" href="#ContactUs">Contact Us</a></li>
                             </ul>
                         </div>
@@ -77,65 +76,38 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>About Us</h3>
-                <p style="padding: 20px 50px 0px 50px; text-align: justify">
+        <div class="row" style="background-color:#222; color:#808080">
+            <div id="AboutUs" class="col-sm-6" style="text-align: justify">
+                <h3><u>About Us</u></h3>
+                <p>
                     This is a event management compant and this is the description of the company.
                     Here we can describe few things about the company
                 
                     This is a event management compant and this is the description of the company.
                     Here we can describe few things about the company
                 </p>
-                <p style="padding: 20px 50px 0px 50px; text-align: justify">
+                <p>
                     This is a event management compant and this is the description of the company.
                     Here we can describe few things about the company
                 </p>
+                <a ui-sref="aboutus" href="#AboutUs" class="pull-right">Know more...</a>
             </div>
-            <div class="col-sm-4">
-                <h3>Contact Us</h3>
-                <div class="form-group" style="padding:20px 50px 0px 50px;">
-                    <table class="table table-condensed">
-                        <tr>
-                            <td>
-                                <input id="txtUsername" type="text" class="form-control" placeholder="Enter your Name" />
+            <div id="ContactUs" class="col-sm-4" style="text-align:center; margin:auto">
+                <h3><u>Contact Info</u></h3>
+                <p"><span class="glyphicon glyphicon-globe"></span><br />name, Stree Adress,<br />city, state, country</p>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="txtEmail" type="text" class="form-control" placeholder="Enter your EmailID"/>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="txtMobile" type="text" class="form-control" placeholder="Enter your Mobile No."/>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="txtComment" cols="20" rows="3" class="form-control" placeholder="Enter your Comment"></textarea>                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="btnContact" type="button" value="Submit" class="form-control" style="background-color: black; color: Grey; font-weight: 800;" />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <p><span class="glyphicon glyphicon-earphone"></span><br />+91 7894561234</p>
+                <p><span class="glyphicon glyphicon-envelope"></span><br/>somename@domail.com</p>                
             </div>
-            <div class="col-sm-4">
-                <h3>Site Map</h3>
-                <ul class="list-group" style="padding:20px 50px 0px 50px;">
-                    <li class="list-group-item"><a ui-sref="home" href="#Home">Home</li>
-                    <li class="list-group-item"><a ui-sref="services" href="#Services">Services</li>
-                    <li class="list-group-item"><a ui-sref="photos" href="#Photos">Photos</li>
-                    <li class="list-group-item"><a ui-sref="videos" href="#Videos">Videos</li>
-                    <li class="list-group-item"><a ui-sref="aboutus" href="#AboutUs">About Us</li>
-                    <li class="list-group-item"><a ui-sref="contactus" href="#ContactUs">Contact Us</li>                    
+            <div class="col-sm-2" style="text-align:justify; margin:auto">
+                <h3><u>Site Map</u></h3>
+                <ul>
+                    <li><a ui-sref="home" href="#Home">Home</li>
+                    <li><a ui-sref="services" href="#Services">Services</li>
+                    <li><a ui-sref="photos" href="#Photos">Photos</li>
+                    <li><a ui-sref="videos" href="#Videos">Videos</li>
+                    <li><a ui-sref="aboutus" href="#AboutUs">About Us</li>
+                    <li><a ui-sref="contactus" href="#ContactUs">Contact Us</li>                    
                 </ul>
             </div>
         </div>
