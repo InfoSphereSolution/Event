@@ -1,128 +1,59 @@
-﻿var app = angular.module("eventApp");
+﻿/// <reference path="../Scripts/angular.js" />
+/// <reference path="../Scripts/angular-ui-router.min.js" />
 
-
-
-
-app.controller('serviceController', function ($scope, $http) {
+angular.module("eventApp").controller('listServiceController', function ($http) {
     var vm = this;
-    vm.services = ser;
+    $http({
+        method: 'GET',
+        url: 'App_WebService/Services.asmx/fetchServices'
+    })
+    .then(function (response) {
+        vm.Services = response.data;
     });
+});
 
-var ser = [
-{
-    "ImageURL": "../Images/aaa.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Birthday",
-    "HashTag": "#corporate #cake #mehendi"
 
-},
-{
-    "ImageURL": "../Images/Koala.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Birthday",
-    "HashTag": "#wedding #birthday  #cake #sangeet"
-},
-{
-    "ImageURL": "../Images/Lighthouse.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Birthday",
-    "HashTag": "#wedding #birthday #corporate #cake #venue"
-},
-{
-    "ImageURL": "../Images/Desert.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Birthday",
-    "HashTag": "#wedding #birthday #venue"
-},
-{
-    "ImageURL": "../Images/Chrysanthemum.jpg",
-    "Name": "ServiceName",
-    "Description": "Some Description about the service in detail. givce as much as information",
-    "Category": "Wedding",
-    "HashTag": "#wedding  #corporate #free"
-},
-{
-    "ImageURL": "../Images/Hydrangeas.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Wedding",
-    "HashTag": "#wedding   #cake"
-},
-{
-    "ImageURL": "../Images/Tulips.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Wedding",
-    "HashTag": "#wedding #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Jellyfish.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Wedding",
-    "HashTag": "#wedding  #corporate #cake"
-},
-{
-    "ImageURL": "../Images/aaa.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Wedding",
-    "HashTag": "#wedding #birthday  #cake"
-},
-{
-    "ImageURL": "../Images/Koala.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Corporate",
-    "HashTag": " #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Lighthouse.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Corporate",
-    "HashTag": "#wedding #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Desert.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Corporate",
-    "HashTag": "#wedding #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Chrysanthemum.jpg",
-    "Name": "Service1",
-    "Description": "SomeDescription",
-    "Category": "Corporate",
-    "HashTag": "#wedding #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Hydrangeas.jpg",
-    "Name": "ServiceName",
-    "Description": "Description1",
-    "Category": "Corporate",
-    "HashTag": "#wedding #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Tulips.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Birthday",
-    "HashTag":"#wedding #birthday #corporate #cake"
-},
-{
-    "ImageURL": "../Images/Jellyfish.jpg",
-    "Name": "ServiceName",
-    "Description": "SomeDescription",
-    "Category": "Wedding",
-    "HashTag":"#wedding #birthday #corporate #cake"
-}
 
-];
+angular.module("eventApp").controller('addServiceController', function ($http) {
+    var vm = this;
+
+    vm.offeredServices = {
+        'Name': 'Music',
+        'ImageURL': '../Images/Desert.jpg',
+        'Description': 'Best music in the town',
+        'Category': 'Wedding',
+        'HashTag': '#wedding #birthday'
+    };
+    vm.addService = function () {
+        $http({
+            method: 'POST',
+            url: 'App_WebService/Services.asmx/addServices',
+            data: JSON.stringify(vm.offeredServices),
+            dataType: "json"
+        })
+    .then(function (response) {
+        alert("Service added successfully...");
+    });
+    };
+
+});
+
+
+angular.module("eventApp").controller('deleteServiceController', function ($http) {
+    var vm = this;
+    vm.deleteService = function (ID) {
+        $http({
+            method: 'POST',
+            url: 'App_WebService/Services.asmx/deleteServices',
+            data: ID
+        })
+    .then(function (response) {
+        alert("Service deleted successfully...");
+    });
+    };
+
+});
+
+
 
 

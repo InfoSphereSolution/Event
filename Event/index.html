@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="eventApp">
 <head>
     <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="Style/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Style/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <link href="Style/Content/bootstrap.css" rel="stylesheet" />
+    <link href="Style/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="App_Style/Site.css" rel="stylesheet" />
 </head>
 <body>
@@ -48,7 +49,7 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a ui-sref="home" href="#Home">Home <span class="sr-only">(current)</span></a></li>
+                                <li class="active"><a ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
                                 <li><a ui-sref="services" href="#Services">Service</a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
@@ -56,11 +57,11 @@
                                         <li><a href="#">Photos</a></li>
                                         <li><a href="#">Videos</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a ui-sref="services" href="#Services">Services</a></li>
+                                        <li><a ui-sref="services">Services</a></li>
                                     </ul>
                                 </li>
-                                <li><a ui-sref="aboutus" href="#AboutUs">About Us</a></li>
-                                <li><a ui-sref="contactus" href="#ContactUs">Contact Us</a></li>
+                                <li><a ui-sref="aboutus">About Us</a></li>
+                                <li><a ui-sref="contactus">Contact Us</a></li>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->
@@ -72,8 +73,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div ui-view>
-                </div>
+                <ui-view></ui-view>                
             </div>
         </div>
         <div class="row" style="background-color: #222; color: #808080; margin-top: 50px">
@@ -94,28 +94,34 @@
             </div>
             <div id="ContactUs" class="col-lg-4 col-sm-4 col-xs-12" style="text-align: center; margin: auto">
                 <h3><i><u>Contact Info</u></i></h3>
-                <p><span class="glyphicon glyphicon-globe"></span>
+                <p>
+                    <span class="glyphicon glyphicon-globe"></span>
                     <br />
                     name, Stree Adress,<br />
-                    city, state, country</p>
-                <p><span class="glyphicon glyphicon-earphone"></span>
+                    city, state, country
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
                     <br />
-                    +91 7894561234</p>
-                <p><span class="glyphicon glyphicon-envelope"></span>
+                    +91 7894561234
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
                     <br />
-                    somename@domail.com</p>
+                    somename@domail.com
+                </p>
             </div>
-            <div class="col-lg-2 col-sm-2 col-xs-12 center-block" style="text-align: center; margin: auto">                     
+            <div class="col-lg-2 col-sm-2 col-xs-12 center-block" style="text-align: center; margin: auto">
                 <h3><i><u>Site Map</u></i></h3>
-                 <p><a ui-sref="home" href="#Home"/>Home </p>
-                    <p><a ui-sref="services" href="#Services"/>Services</p>
-                    <p><a ui-sref="photos" href="#Photos"/>Photos</p>
-                    <p><a ui-sref="videos" href="#Videos"/>Videos</p>
-                    <p><a ui-sref="aboutus" href="#AboutUs"/>About Us</p>
-                    <p><a ui-sref="contactus" href="#ContactUs"/>Contact Us</p>                    
-                
+                <p><a ui-sref="home" href="#Home" />Home </p>
+                <p><a ui-sref="services" href="#Services" />Services</p>
+                <p><a ui-sref="photos" href="#Photos" />Photos</p>
+                <p><a ui-sref="videos" href="#Videos" />Videos</p>
+                <p><a ui-sref="aboutus" href="#AboutUs" />About Us</p>
+                <p><a ui-sref="contactus" href="#ContactUs" />Contact Us</p>
+
             </div>
-            
+
         </div>
         <div class="row">
             <div class="col-sm-12">
@@ -123,13 +129,14 @@
             </div>
         </div>
     </div>
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>    
+    <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-ui-router.min.js"></script>
     <script src="App_Scripts/app.js"></script>
     <!--Controllers-->
     <script src="../App_Controller/ServicesController.js"></script>
+
+    <script src="Scripts/bootstrap.js"></script>
 </body>
 </html>
 
