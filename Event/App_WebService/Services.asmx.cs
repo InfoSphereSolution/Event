@@ -38,7 +38,7 @@ namespace Event.App_WebService
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public void fetchServices()
         {
-            List<OfferedServices> listServices = new List<OfferedServices>();
+            List<offeredServicesModel> listServices = new List<offeredServicesModel>();
             using (con = new SqlConnection(ConnectionString))
             {
                 cmd = new SqlCommand("select ID ,Name, ImageURL, [Description], Category, HashTag from Services", con);
@@ -46,7 +46,7 @@ namespace Event.App_WebService
                 reader = cmd.ExecuteReader();                
                 while (reader.Read())
                 {
-                    OfferedServices offeredServices = new OfferedServices();
+                    offeredServicesModel offeredServices = new offeredServicesModel();
                     offeredServices.ID = Convert.ToInt32(reader["ID"]);
                     offeredServices.Name = Convert.ToString(reader["Name"]);
                     offeredServices.ImageURL = Convert.ToString(reader["ImageURL"]);
@@ -62,7 +62,7 @@ namespace Event.App_WebService
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]        
-        public void addServices(OfferedServices OfferedServices)
+        public void addServices(offeredServicesModel OfferedServices)
         {
             using (con = new SqlConnection(ConnectionString))
             {

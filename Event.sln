@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "Event\Event.csproj", "{1D697B90-9BA7-4B41-B765-A3AD25642859}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventWebAPI", "EventWebAPI\EventWebAPI.csproj", "{4903F7BD-6724-47F1-AB82-939DCDF74BB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{1D697B90-9BA7-4B41-B765-A3AD25642859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D697B90-9BA7-4B41-B765-A3AD25642859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D697B90-9BA7-4B41-B765-A3AD25642859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4903F7BD-6724-47F1-AB82-939DCDF74BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4903F7BD-6724-47F1-AB82-939DCDF74BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4903F7BD-6724-47F1-AB82-939DCDF74BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4903F7BD-6724-47F1-AB82-939DCDF74BB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

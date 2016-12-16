@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Event.Model
 {
-    public class OfferedServices
+    public class offeredServicesModel
     {
         public Int32 ID { get; set; }
         public String Name { get; set; }
@@ -13,8 +13,5 @@ namespace Event.Model
         public String Description { get; set; }
         public String Category { get; set; }
         public String HashTag { get; set; }
-
-
-        public OfferedServices() { }
     }
 }
