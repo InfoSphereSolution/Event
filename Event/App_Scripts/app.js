@@ -35,6 +35,12 @@ angular.module("eventApp", ['ui.router'])
                 url: '/ContactUs',
                 templateUrl: 'Pages/ContactUs.html'
             })
+
+             .state('login', {
+                url: "/Login",
+                templateUrl: "Pages/Login.html"
+        })
+
     });
 
 

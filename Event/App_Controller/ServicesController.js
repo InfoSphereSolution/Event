@@ -4,15 +4,15 @@
 angular.module("eventApp").controller('listServiceController', function ($http) {
     var vm = this;
     vm.Services = [];
-    vm.Services = $http.get("http://localhost:5623/api/values");
+    //vm.Services = $http.get("http://localhost:5623/api/values");
 
-    //$http({
-    //    method: 'GET',
-    //    url: 'http://localhost:5623/api/values'
-    //})
-    //.then(function (response) {
-    //    vm.Services = response.data;
-    //});
+    $http({
+        method: 'GET',
+        url: 'http://localhost:5623/api/values'
+    })
+    .then(function (response) {
+        vm.Services = response.data;
+    });
 });
 
 

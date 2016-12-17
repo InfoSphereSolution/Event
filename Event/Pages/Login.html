@@ -1,0 +1,7 @@
+﻿<div ng-controller="loginController as logonCtrl">
+    <form action="/" id="login">
+        <input type="text" name="username" id="username" placeholder="username" ng-model="username" /><br />
+        <input type="password" name="password" id="password" placeholder="password" ng-model="password" /><br />
+        <input id="btnSubmit" type="button" value="Login" ng-click="logonCtrl.submit()" />
+    </form>
+</div>

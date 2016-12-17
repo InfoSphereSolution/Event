@@ -74,8 +74,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Controller\LoginController.js" />
     <Content Include="App_Controller\ServicesController.js" />
     <Content Include="App_WebService\Services.asmx" />
+    <Content Include="dashboard.html" />
     <Content Include="Images\aaa.jpg" />
     <Content Include="Images\Chrysanthemum.jpg" />
     <Content Include="Images\Desert.jpg" />
@@ -90,6 +92,7 @@
     <Content Include="Pages\ContactUs.html" />
     <Content Include="index.html" />
     <Content Include="Pages\HomeContent.html" />
+    <Content Include="Pages\Login.html" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -169,7 +172,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Scripts\Controller\" />
     <Folder Include="App_Services\" />
   </ItemGroup>
   <PropertyGroup>

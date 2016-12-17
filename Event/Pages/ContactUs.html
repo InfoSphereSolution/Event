@@ -11,7 +11,7 @@
                 <h2><i>General Enquiries</i></h2>
                 <div class="form-group" style="margin: 0px auto 0px auto;">                    
                     <div class="form-area" style="margin:auto">
-                        <form role="form">                            
+                        <form name='contactform' role="form">                            
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" required />
                             </div>
@@ -19,12 +19,12 @@
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required />
+                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required />
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" id="message" placeholder="Message" maxlength="140" rows="6"></textarea>
+                                <textarea class="form-control" id="message" placeholder="Message" maxlength="140" rows="6" required></textarea>
                             </div>
-                            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit</button>
+                            <button type="button" id="submit" name="submit" ng-disabled="!contactform.$valid" class="btn btn-primary pull-right">Submit</button>
                         </form>
                     </div>
                 </div>
